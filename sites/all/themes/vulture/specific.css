@@ -1,0 +1,1287 @@
+
+
+/* This is the specific module and page CSS that handles module styling, individual overrides, and other special cases*/
+
+/* @group Aggregator */
+
+.feedcontainer{
+	margin-left:0px;
+	margin-bottom:10px;
+	margin-top:10px;
+	position:relative;
+	}
+	
+.feedcontainer h2{
+	margin-bottom:10px;
+	font-size:1.6em;
+	}
+	
+.feedsummary {
+	padding-bottom:10px;
+	border-bottom:1px dashed #ccc;
+	}
+	
+#aggregator h2{
+	font-size:1.6em;
+	}
+
+#aggregator li {
+	margin:3px 0 3px 18px;
+	padding:0 0 0 3px;
+	list-style:square;
+    background:none;
+    font-size: 0.8em;
+}
+
+.feedcontainer .feedcontent{border-bottom:1px dashed #ccc;}
+
+
+/* @end */
+
+/* @group Book */
+
+#content-inner .node-type-book p{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.25em;
+	line-height: 1.2em;
+	margin-bottom: 10px;
+	text-align: justify;
+	text-indent: 1.5em;
+}
+
+.book-navigation{
+	margin-top:10px;
+	background: #F4F7E7;
+	font-size:0.9em;
+    }
+
+.book-navigation a{
+	font-weight:normal;
+	padding-left: 20px;
+	}
+
+.book-navigation .menu {
+  border-top: 1px solid #CCC;
+  padding: 1em 0 0 3em;
+}
+.book-navigation .page-links {
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.book-navigation .menu li{
+	padding-left:22px;
+	margin:4px 0 4px 0;
+	background:url(img/figlio.gif) no-repeat 0 0px;
+    list-style:none;
+    list-style-image:none;
+    list-style-type:none;
+}
+
+.links .book_printer,
+.links .book_add_child{
+	padding-left:22px;
+	}
+
+.links .book_printer{
+    background:url(img/print.gif) no-repeat;
+}
+
+.links .book_add_child{
+    background:url(img/add.gif) no-repeat;
+}
+
+#content-inner .node-type-book .field-field-book-copyright p{
+	font-size: 0.9em;
+	text-indent: 0;
+}
+
+.field-field-book-subtitle{
+	font-size: 1.2em;
+	font-weight: bold;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
+.field-field-book-authorlink{
+	margin-bottom: 10px;
+}
+
+.field-field-book-pdf .clear-block {
+	margin-bottom: 20px;
+	clear: none;
+	display: inline-block;
+}
+
+.block-book .title,
+.block-book .title a:link,
+.block-book .title a:visited{
+	color: white;
+	font-size: .75em;
+	line-height: .9em;
+	vertical-align: top;
+}
+
+/* @end */
+
+/* @group Blocks */
+
+#block-block-6 > div.content p{
+	text-align: center;
+	font-size: .9em;
+	font-style: italic;
+}
+
+
+#sidebar-last div#block-block-6>div.content {
+	padding: 2px;
+	border: none;
+	background-color: #eee;
+}
+
+/* @group Icons */
+
+/* Comment Link Icons */
+
+.comment_delete{
+	background:url(img/commentdelete.gif) no-repeat;
+	}
+	
+.comment_edit{
+	background:url(img/commentedit.gif) no-repeat;
+	}
+	
+.comment_reply{
+	background:url(img/commentadd.gif) no-repeat;
+	}
+	
+.comment_forbidden{
+	background:url(img/lock.gif) no-repeat;
+	}
+	
+.comment_comments{
+	background:url(img/comments.gif) no-repeat;
+	}
+	
+.comment_add{
+	background:url(img/comment_add.gif) no-repeat;
+	}
+	
+.node_read_more{
+	background:url(img/readmore.gif) no-repeat;
+	}
+
+/* block-icon */
+div.block-icon {
+  height: 36px;
+  left: 0;
+  position: absolute;
+  top: -0.666em;
+  width: 36px;
+}
+
+/*--- BLOG BLOCKS ---*/
+div.block-blog div.block-icon {
+  background: transparent url('icons/tnt_icon_01.png') no-repeat left center;
+}
+
+#block-blog-0 div.block-icon,
+body.layout-main-last #sidebar-last #block-blog-0 h2.block-title {
+  background: transparent url('icons/tnt_icon_02.png') no-repeat left center;
+}
+
+/*--- BOOK BLOCK ---*/
+#block-book-0 div.block-icon {
+  background: url('icons/tnt_icon_07.png') no-repeat left center;
+}
+
+/*--- Calendar BLOCK ---*/
+#block-views-event_calendar-block_1 div.block-icon {
+  background: transparent url('icons/tnt_icon_02.png') no-repeat left center;
+}
+
+/*--- COMMENTS & FORUMS BLOCKS ---*/
+#comments h2,
+div.block-comment div.block-icon,
+div.comments-block-icon,
+#block-views-comments_recent-block div.block-icon {
+  background: transparent url('icons/tnt_icon_01.png') no-repeat left center;
+}
+
+div.block-forum div.block-icon,
+body.layout-main-last #sidebar-last div.block-comment h2.block-title,
+body.layout-main-last #sidebar-last div.block-forum h2.block-title,
+body.layout-main-last #sidebar-last #block-views-comments_recent-block h2.block-title {
+  background: transparent url('icons/tnt_icon_06.png') no-repeat left center;
+}
+
+/*--- DEVEL BLOCK ---*/
+#block-menu-devel div.block-icon,
+body.layout-main-last #sidebar-last #block-menu-devel h2.block-title {
+  background: transparent url('icons/tnt_icon_12.png') no-repeat left center;
+}
+
+/*--- MENU BLOCK ---*/
+div.block-menu div.block-icon,
+body.layout-main-last #sidebar-last div.block-menu h2.block-title {
+  background: transparent url('icons/tnt_icon_13.png') no-repeat left center;
+}
+
+/*--- SEARCH BLOCK ---*/
+div.block-search div.block-icon,
+body.layout-main-last #sidebar-last div.block-search h2.block-title {
+  background: transparent url('icons/tnt_icon_15.png') no-repeat left center;
+}
+
+div.block-search h2.block-title {
+  padding-left: 3.125em;
+}
+
+/*--- USER BLOCK ---*/
+div.block-user div.block-icon,
+body.layout-main-last #sidebar-last div.block-user h2.block-title {
+  background: transparent url('icons/tnt_icon_08.png') no-repeat left center;
+}
+
+/*--- USER LOGIN BLOCK ---*/
+#block-user-0 div.block-icon,
+body.layout-main-last #sidebar-last #block-user-0 h2.block-title {
+  background: transparent url('icons/tnt_icon_14.png') no-repeat left center;
+}
+
+/*--- VIEWS DEFAULT BLOCKS ---*/
+#block-views-archive-block div.block-icon,
+body.layout-main-last #sidebar-last #block-views-archive-block h2.block-title {
+  background: transparent url('icons/tnt_icon_07.png') no-repeat left center;
+}
+
+/* Facebook Status Block */
+
+#block-facebook_status-1 div.block-icon {
+  background: transparent url('icons/twitter.png') no-repeat left center;
+}
+
+/* Polls on home and patrol pages */
+#block-views-patrol_page-block_1 div.block-icon,
+#block-views-home_page_new-block_1 div.block-icon{
+  background: transparent url('icons/pie_chart.png') no-repeat left center;	
+}
+
+/* FAQ Categories Block */
+#block-faq-0 div.block-icon{
+  background: transparent url('icons/questionmark.png') no-repeat left center;
+}
+
+/* Publications booklist block */
+#block-views-booklist-block_1 div.block-icon{
+  background: transparent url('icons/book.png') no-repeat left center;	
+}
+
+/* Patrol Members Block */
+#block-views-patrol_members-block_1 div.block-icon{
+  background: transparent url('icons/users_two.png') no-repeat left center;		
+}
+
+
+/* remove block icons for preface & footer blocks */
+#preface-wrapper div.block div.block-icon,
+#footer div.block div.block-icon {
+  background: none;
+}
+
+/*----------- BLOCK-TITLE -------------*/
+/* targeting body.layout-main-last #sidebar-last block-title */
+
+/* BLOG BLOCKS*/
+body.layout-main-last #sidebar-last #block-blog-0 h2.block-title {
+  background-position: left -1px;
+}
+
+/* BOOK BLOCKS */
+
+
+/* COMMENTS BLOCKS */
+body.layout-main-last #sidebar-last div.block-comment h2.block-title {
+  background-position: left -1px;
+}
+
+/* DEVEL BLOCKS */
+body.layout-main-last #sidebar-last #block-menu-devel h2.block-title {
+  background-position: left -1px;
+}
+
+/* FORUM BLOCKS */
+body.layout-main-last #sidebar-last div.block-forum h2.block-title {
+  background-position: left -1px;
+}
+
+/* MENU BLOCKS */
+body.layout-main-last #sidebar-last div.block-menu h2.block-title {
+  background-position: left -1px;
+}
+
+/* SEARCH BLOCK */
+body.layout-main-last #sidebar-last div.block-search h2.block-title {
+  background-position: left -1px;
+  margin: 0 0 4px;
+}
+
+/* USER BLOCKS */
+body.layout-main-last #sidebar-last div.block-user h2.block-title {
+  background-position: left -1px;
+}
+
+/* USER LOGIN BLOCK */
+body.layout-main-last #sidebar-last #block-user-0 h2.block-title {
+  background-position: left -1px;
+}
+
+/* VIEWS BLOCKS */
+body.layout-main-last #sidebar-last #block-views-archive-block h2.block-title {
+  background-position: left -1px;
+}
+
+body.layout-main-last #sidebar-last #block-views-comments_recent-block h2.block-title {
+  background-position: left -1px;
+}
+
+
+
+/**
+ * HOW TO ADD ICONS TO BLOCKS
+ *
+ * Below is an example of adding an icon to a custom block.
+ * To add an icon to your custom block follow these steps:
+ * 1. Place your 36x36 icon into the icons folder that came with the theme
+ * 2. Copy & paste the example below into the theme's local.css file
+ * 3. Find your block's id & delta (e.g., block-block-1) - use Firebug!
+ * 4. Replace the block id & delta with the id & delta of the custom block you want to add an icon to
+ * 5. Add the name of your icon file to the block's background url (e.g., url('icons/name-of-icon.png'))
+ * 
+ * NOTE: When upgrading to a newer version of this theme, changes made to this file will be overwritten.
+ * You should put your custom block & icon styles in local.css (see: the local_sample.css file for more details).
+
+#block-block-1 div.block-icon {
+  background: transparent url('icons/name-of-icon.png') no-repeat left center;
+}
+
+*/
+
+
+
+/* @end */
+
+/* @end */
+
+/* @group Blog */
+
+
+
+/* @end */
+
+/* @group Comments */
+
+#comments {
+  clear: both;
+}
+
+#comments h2.comments {
+  background-color: #156aa3;
+  color: #fff;
+  font-family: Myriad Pro, Myriad Web Pro Regular, Lucida Grande, Geneva, Trebuchet MS, sans-serif;
+  font-size: 1.33em;
+  font-weight: 600;
+  padding: 6px 14px 3px 48px;
+  text-shadow: #545454 1px 1px;
+  text-transform: none;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+}
+
+#comments .content {
+  background: transparent;
+  border: none;
+}
+
+#main-wrapper #comments a.active {
+  color: #27638C;
+  text-decoration: none;
+}
+
+.box {
+  padding: 10px;
+}
+
+#comment-form {
+  margin: 0 0 20px;
+  padding: 0 20px;
+}
+
+.comment {
+  border: none;
+  margin: 6px 0 0;
+  padding: 10px;
+}
+
+.comment h3.title {
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.comment .links a {
+  font-size: 0.9em;
+  text-align: right;
+}
+
+#comments .odd {
+  background-color: #F4F7E7;
+  border: 1px solid #ddd;
+}
+
+#comments .even {
+  background-color: #fff;
+}
+
+#comments .comment-by-author {
+  background-color: #FFFFEA;
+}
+
+.comment ul.links {
+  text-align: right;
+  clear: right;
+}
+
+#content-content .comment ul.links li {
+  background: transparent;
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+
+.signature p {
+  border-top: 1px solid #d6ddb9;
+  font-family: serif;
+  font-size: 0.916em;
+  margin: 10px 0;
+  padding: 0;
+}
+
+/*comments & links*/
+
+#comments{
+	margin-top: 2em;
+	font-size: 0.9em;
+	}
+
+#comments .box h2{
+font-size:1.3em;
+}
+
+.comment .title{
+	margin-bottom:10px;
+	font-size:1.6em;
+    font-family:Georgia, "Times New Roman", Times, serif;
+}
+
+#comments .content{margin-bottom:5px;}
+
+.submitted{
+	margin-bottom:5px;
+    font-style:italic;
+    font-size:1em;
+}
+
+.comment{
+	margin:0 0 1em;
+	padding:1em;
+	background-color:#ededed;
+    border:1px solid #ccc;
+	}
+
+.links{
+	margin-top:0.5em;
+	clear:left;
+	font-size: 1.0em;
+	}
+
+.linksteaser{
+	padding-bottom:15px;
+	margin-bottom: 15px;
+	border-bottom:1px dashed #ccc;
+	overflow: hidden;
+	}
+
+.linksteaser ul li{margin-right: 5px;}
+
+.comment .links ul li{
+	padding-left: 23px;
+	padding-top:1px;
+	padding-bottom:1px;
+	list-style:none;
+    background:none;
+	}
+
+
+#content-content .links li.comment_forbidden,
+#content-content .links li.comment_comments,
+#content-content .links li.blog_usernames_blog first,
+#content-content .links li.book_add_child,
+#content-content .links li.book_printer,
+#content-content .links li.node_read_more,
+#content-content .links li.comment_add{
+  padding-left:22px;
+  padding-bottom:2px;
+}
+
+#content-content .links li.comment_add{padding-bottom:2px;}
+
+
+
+/* Meta in nodes */
+
+.metanode{
+    font:0.85em Georgia, "Times New Roman", Times, serif;
+    font-style:italic;
+}
+
+.metanode span {
+	padding-bottom: 5px;
+}
+.metanode span.author{
+	background:transparent url(img/user.gif) no-repeat scroll 0 0;
+	padding-left: 21px;
+}
+
+.metanode span.date{
+	background: transparent url(img/clock.gif) no-repeat scroll 2px 0;
+	padding-left: 21px;
+}
+
+.metanode span.author,
+.metanode span.date{
+	font-weight:bold;
+}
+
+/* @end */
+
+/* @group Events */
+
+/* Event Description Layout */
+
+.field-field-event-picture{
+	float: right;
+}
+
+#node-data-field-event-date-time-field-event-cancel-value,
+.field-field-event-cancel{
+	color: red;
+	text-transform: uppercase;
+}
+
+#edit-field-event-cancel-value-wrapper {
+  color: red;
+}
+
+/* Calendar View */
+
+#calpopup .content{
+	margin-top: .5em;
+}
+
+.month-view .view-data-node-title a{
+	font-size: 1.1em;
+	text-decoration: none;
+}
+
+#content-content .date-heading h3{
+	text-align: center;
+}
+
+/* @end */
+
+/* @group FAQ */
+
+#content-content .faq-category-list{
+	font-weight: bold;
+	font-style: italic;
+}
+
+#content-content .faq-category-list .faq-qa-description{
+	font-weight: normal;
+	font-style: normal;
+	font-size: .9em;
+}
+
+#content-content ul.faq-category-list li{
+	background: transparent url(img/collapsed.gif) no-repeat scroll 0 2px;
+}
+
+#content-content .faq-question{
+	font-weight: bold;
+}
+/* @end */
+
+/* @group Feedback */
+
+div#block-feedback-form {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  overflow: hidden;
+  z-index: 10;
+  background-color: whitesmoke;
+  border: 1px solid navy;
+}
+
+
+/* @end */
+
+/* @group Forums */
+
+#forum {
+	font-size: 1em;
+}
+
+#forum .name{
+	font-size: 1.1em;
+}
+#forum .description {
+  font-size: 0.9em;
+  margin: 0.5em;
+}
+
+#forum td.created, 
+#forum td.posts, 
+#forum td.topics, 
+#forum td.last-reply,
+#forum td.replies, 
+#forum td.pager {
+  white-space: nowrap;
+}
+
+#forum td.posts, 
+#forum td.topics, 
+#forum td.replies, 
+#forum td.pager {
+  text-align: center;
+}
+
+.forum-topic-navigation {
+  padding: 1em 0 0 3em;
+  border-top: 1px solid #888;
+  margin-top: 10px;
+  border-bottom: 1px solid #888;
+  text-align: center;
+  padding: 0.5em;
+  background: #eee;
+  font-size: 0.9em;
+}
+
+.forum-topic-navigation a{
+	font-weight:normal;
+	}
+
+.forum-topic-navigation .topic-previous {
+  text-align: right;
+  float: left;
+  width: 46%;
+}
+
+.forum-topic-navigation .topic-next {
+  text-align: left;
+  float: right;
+  width: 46%;
+}
+
+#forum ul.links li.forum{
+	padding-left:22px;
+	background:url(img/post.gif) no-repeat 0px -1px;
+	font-size:1em;
+	}
+	
+#forum .name{margin-bottom:8px;}
+
+#forum .links{
+	margin:0px;
+	display:inline;
+}
+
+#forum table tr.even{
+	background-color:#ededed;
+	}
+
+#forum table tr td.container{
+	background-color: #FFF;
+	}
+
+
+/* @end */
+
+/* @group Patrol Members */
+
+/* Patrol Pages */
+
+body.node-type-patrol.layout-first-main-last #sidebar-first {
+	margin: 0 15px 0 0;
+	width: 260px;
+}
+
+body.node-type-patrol.layout-first-main-last  #content-wrapper {
+	margin: 0;
+	width: 665px;
+}
+
+body.node-type-patrol.layout-first-main-last  #content-header {
+	margin: 0;
+	width: 440px;
+}
+
+
+/* Patrol Members Block */
+
+
+.view-patrol-members tr td,
+.view-patrol-members-anonymous tr td{
+	text-align: center;
+	border: none;
+	font-size: .9em;
+}
+
+.view-patrol-members tbody,
+.view-patrol-members-anonymous tbody {
+  border-top: none;
+}
+
+.view-patrol-members tr td .imagecache,
+.view-patrol-members-anonymous tr td .imagecache{
+	float: left;
+	padding-bottom: 6px;
+}
+
+.view-patrol-members tr td .views-field-mail,
+.view-patrol-members tr td .views-field-field-profile-nickname-value,
+.view-patrol-members tr td .views-field-field-profile-phone-value,
+.view-patrol-members tr td .views-field-name{
+	overflow: hidden;
+	padding-top: 3px;
+}
+
+.view-patrol-members tr td .views-field-field-profile-nickname-value,
+.view-patrol-members-anonymous tr td .views-field-field-profile-nickname-value{
+	font-family: "Comic Sans MS, Impact, cursive";
+	padding-top: 8px;
+	line-height: 1.3em;
+}
+
+.view-patrol-members tr td .views-field-name,
+.view-patrol-members-anonymous tr td .views-field-name{
+	padding-top: 10px;
+	font-size: 1.1em;
+	line-height: 1.2em;
+}
+
+/* @end */
+
+/* @group Polls */
+
+.poll .bar {                                      /* styles for poll ratings */
+  background-color: #DDD;
+}
+
+.poll .bar .foreground {
+  background-color: #156aa3;
+  float: none;
+}
+
+.poll{
+	clear:both;
+	margin-top:3px;
+}
+
+.poll .title{
+	margin:8px 0 8px 0;
+	font-weight:bold;
+	text-align: center;
+}
+.field-field-poll-description{
+	text-align: justify;
+	margin: 0 0 10px 0;
+}
+
+.poll .percent, .poll .text{margin:1px 0 1px 0;}
+.poll .form-item{margin:8px 0 8px 0;}
+.poll .choices{margin:0px;}
+.poll .vote-form{text-align:left;}
+.poll .total{text-align:left;}
+.poll .form-submit{
+	float: right;
+}
+.poll .view-footer{
+	text-align: center;
+}
+
+#edit-vote.form-submit {
+}
+
+/* @end */
+
+/* @group Roster */
+
+/* Page Displays */
+
+.view-display-scouters .view-header,
+.view-display-plc .view-header{
+	font: 1.2em/1.3em Georgia, "Times New Roman", Times, serif;
+}
+
+.view-display-scouters .views-field-field-profile-photo-fid,
+.view-display-plc .views-field-field-profile-photo-fid{
+	float: left;
+	margin-right: 10px;
+}
+
+.view-display-scouters .views-row-odd,
+.view-display-scouters .views-row-even,
+.view-display-plc .views-row-odd,
+.view-display-plc .views-row-even{
+	clear: left;
+}
+
+.view-display-scouters .views-field-field-profile-firstname-value,
+.view-display-scouters .views-field-field-profile-lastname-value,
+.view-display-scouters .views-field-field-profile-nickname-value,
+.view-display-scouters .views-field-field-profile-title-value,
+.view-display-plc .views-field-field-profile-firstname-value,
+.view-display-plc .views-field-field-profile-lastname-value,
+.view-display-plc .views-field-field-profile-nickname-value{
+	font-size: 1.2em;
+	display: inline;
+	font-weight: normal;
+}
+
+.view-display-scouters .views-field-field-profile-resume-value,
+.view-display-plc .views-field-teaser{
+	margin-top: 10px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.view-display-plc .views-field-title-1{
+	display: inline;
+}
+
+.view-roster-scouts .feed-icon,
+.view-roster-adults .feed-icon{
+  float: right;
+  background-color: white;
+  
+}
+
+.print-content .feed-icon{
+  display: none;
+}
+/* Block Displays */
+
+
+#content-content .view-roster-health-adult ul li,
+#content-content .view-roster-health-scout ul li{
+	background-image: none;
+}
+
+#content-content .view-roster-scouts thead th,
+#content-content .view-roster-adults thead th{
+	font-size: 0.95;
+}
+
+.view-roster-health-adult .views-field-field-profile-lastname-value, 
+.view-roster-health-adult .views-field-field-profile-firstname-value,
+.view-roster-health-scout .views-field-field-profile-lastname-value,
+.view-roster-health-scout .views-field-field-profile-firstname-value{
+	display: inline;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.view-roster-scouts table tr td,
+.view-roster-adults table tr td{
+	font-size: 0.95em;
+}
+
+#content-content.view-displayroster-plc .views-field-field-name{
+	font-size: 1.2em;
+}
+
+.view-display-plc .views-field-name a{
+	text-decoration: none;
+}
+
+#content-content .view-displayroster-plc .views-field-field-profile-photo-fid img{
+	float: left;
+	margin: 0 15px 10px 0;
+}
+
+.view-displayroster-plc{
+	border-color: silver;
+	background: #eee;
+	padding: 10px;
+	border-right-style: groove;
+	border-left-style: groove;
+	clear: left;
+}
+	
+.view-displayroster-plc .views-row-odd{
+	border-style: groove;
+	border-color: silver;
+	background: #fff;
+	padding: 10px;
+	clear: left;
+}
+
+/* @end */
+
+/* @group Search */
+
+#content-content .search-results dt{
+	margin-top:10px;
+	background:url(img/result.gif) no-repeat;
+	}
+
+#content-content .search-results p strong{ background: #FFFF99}
+
+
+/* @end */
+
+/* @group Taxonomy */
+
+.terminfo{
+	padding:15px;
+	margin-bottom:10px;
+	background:#fdffe5;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	}
+
+.terminfo p{
+	color:#666600;
+	font-size:1.5em;
+    font-style:italic;
+    line-height:1.3em;
+    text-align:center;
+    font-weight:lighter;
+}
+
+/*taxonomy terms in node*/
+
+.taxonomy{
+	margin:15px 0 25px 0;
+	padding-top:10px;
+	clear:left;
+	border-top:4px solid #eee;
+	font-size: 1em;
+}
+
+.taxonomyteaser{
+	margin:10px 0 15px 0;
+	padding-bottom:10px;
+	clear:left;
+	font-size: 1em;
+}
+
+.taxonomy span{
+	padding-left:21px;
+	padding-right:10px;
+	background:url(img/tags.gif) no-repeat;
+	font-weight: bold;
+}
+
+p span.tagsteaser{
+	padding-left:23px;
+	background:url(img/tags.gif) no-repeat;
+    color:#24365c;
+    font-weight: bold;
+}
+
+.preview .node .taxonomy ul li span{
+	padding-left:3px;
+	padding-right:3px;
+	background:none;
+}
+
+
+
+/* @end */
+
+/* @group User Pages */
+
+/*   TWO COLUMN LAYOUT   (Sidebar:Main Content) */
+
+body.layout-first-main.user #sidebar-first {
+	margin: 0 15px 0 0;
+	width: 290px;
+}
+
+body.layout-first-main.user #content-wrapper {
+	margin: 0;
+	width: 635px;
+}
+
+.view-node-profile-photo{
+}
+
+.view-user-profile label{
+	font-weight: bold;
+}
+
+/* Left Sidebar */
+
+.user #sidebar-first div.block div.content{
+  border:none;
+  padding: 0;
+  background-image: none;
+}
+
+body.user #sidebar-first h2.block-title {
+  background-color: #156aa3;
+  font-size: 1.2em;
+  color: #fff;
+  padding: 8px 8px 6px 8px;
+  text-align: center;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+}
+
+
+/* Contacts Block */
+
+body.user #sidebar-first #block-views-user_contact-block_3 div.content,
+body.user #sidebar-first #block-views-user_contact-block_4 div.content,
+body.user #sidebar-first #block-views-user_contact-block_5 div.content,
+body.user #sidebar-first #block-views-user_contact_anonymous-block_3 div.content,
+body.user #sidebar-first #block-views-user_contact_anonymous-block_4 div.content,
+body.user #sidebar-first #block-views-user_contact_anonymous-block_5 div.content {
+  background: transparent url('images/block-gradient.png') no-repeat center bottom;
+  border-bottom: 3px solid #E1E5E7;
+	border-right: 3px solid #E1E5E7;
+	border-left: 3px solid #E1E5E7;
+  padding: 10px 5px 8px;
+  text-align: center;
+  font-size: 1.1em;
+  -moz-border-radius-bottomleft: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+	line-height: 1.2em;
+}
+
+.views-field-field-profile-nickname-value{
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 0 0 3px;
+}
+#block-views-user_contact-block_3 .views-field-field-profile-title-value,
+#block-views-user_contact-block_3 .views-field-field-profile-firstname-value,
+#block-views-user_contact-block_3 .views-field-field-profile-lastname-value,
+#block-views-user_contact_anonymous-block_3 .views-field-field-profile-title-value,
+#block-views-user_contact_anonymous-block_3 .views-field-field-profile-firstname-value,
+#block-views-user_contact_anonymous-block_3 .views-field-field-profile-lastname-value{
+	font-size: 1.2em;
+	display: inline;
+}
+
+#block-views-user_contact-block_4 .views-field-field-profile-firstname-value,
+#block-views-user_contact-block_4 .views-field-field-profile-lastname-value,
+#block-views-user_contact-block_4 .views-field-field-profile-grade-value,
+#block-views-user_contact_anonymous-block_4 .views-field-field-profile-firstname-value,
+#block-views-user_contact_anonymous-block_4 .views-field-field-profile-lastname-value,
+#block-views-user_contact_anonymous-block_4 .views-field-field-profile-grade-value{
+	display: inline;
+}
+
+#block-views-user_contact-block_3 .views-field-field-profile-position-nid,
+#block-views-user_contact-block_4 .views-field-field-profile-position-nid,
+#block-views-user_contact_anonymous-block_3 .views-field-field-profile-position-nid,
+#block-views-user_contact_anonymous-block_4 .views-field-field-profile-position-nid{
+	font-size: 1.0em;
+	border-bottom-style: none;
+}
+/* WARNING: Will break view bulk_user_edit if enabled. Disabled on July 9, 2010. Instead, use row styling options to make fields inline. */
+.views-field-field-profile-city-value,
+.views-field-field-profile-state-value,
+.views-field-field-profile-zip-value{
+	float: none;
+	display: inline;
+}
+.view-roster-scouts .views-field-field-profile-city-value,
+.view-roster-scouts .views-field-field-profile-state-value,
+.view-roster-scouts .views-field-field-profile-zip-value,
+.view-bulk-user-edit .views-field-field-profile-city-value,
+.view-bulk-user-edit .views-field-field-profile-state-value,
+.view-bulk-user-edit .views-field-field-profile-zip-value{
+  display: table-cell;
+}
+
+/* Profile Section */
+
+.profile h3{
+	border-bottom: none;
+}
+
+.profile .facebook_status_status{
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.3em;
+	color: #005a8c;
+	text-decoration: none;
+	border-style: solid;
+	border-width: 1px;
+	padding: 10px;
+	background-color: #efefef;
+}
+
+.profile .facebook_status_status .submitted{
+	font-weight: normal;
+	font-size: .77em;
+	color: black;
+}
+
+.views-field-field-profile-position-nid
+{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color:#005A8C;
+    font-size:1.4em;
+    line-height:1.2em;
+    border-bottom:1px solid #CCCCCC;
+    text-decoration: none;
+}
+
+#content-content .views-field-field-profile-position-nid a{
+	text-decoration: none;
+}
+
+/* Guestbook */
+
+.guestbook-entry .author,
+.guestbook-entry .submitted{
+	display: inline;
+}
+
+
+/* @end */
+
+/* @group Views */
+
+div.view div.views-admin-links {
+    width:auto;
+}
+
+.view .view-comments-recent .views-field-subject {
+  font-weight: bold;
+}
+
+.view .view-style-node{
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.view .view-style-teaser{
+}
+
+.view .view-style-list{
+}
+
+.view .view-style-table{
+}
+
+.view .views-admin-links li {
+  background: transparent !important;
+}
+
+/* Alumni Roster Width */
+.grid-even td {
+  width: 33%;
+}
+
+.grid-roster {
+  line-height: 1.5em;
+}
+
+.grid-roster .views-field-field-profile-photo-fid,
+.grid-roster views-field-name {
+  display: inline-block;
+  float: left;
+}
+
+.grid-roster .views-field-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.grid-roster .views-field-field-profile-resume-value {
+  float: left;
+  padding-top: 2px;
+}
+
+.grid-roster tr {
+  height: 200px;
+  vertical-align: top;
+}
+
+.plc-roster tr {
+  height: auto;
+}
+
+.plc-roster .views-field-title {
+  padding-top: 2px; 
+  padding-bottom: 10px; 
+}
+
+.plc-roster .views-field-mail { 
+  padding-bottom: 2px; 
+}
+
+/* Special for List of Patrols */
+#node-772 .patrol_list_view .views-field-title {
+  padding: 10px;
+  padding-bottom: 20px;
+  display: run-in;
+  float: left;
+  font-size: 1.5em;
+  
+}
+/* @end */
+
+/* @group Wiki */
+
+/* Different Typography for Wiki pages */
+
+#content-inner .node-type-wiki p{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.25em;
+	line-height: 1.2em;
+	margin-bottom: 10px;
+	text-align: justify;
+	text-indent: 1.5em;
+}
+
+/* @end */
+
+/* Front Page */
+.field-field-event-conditions .odd,
+.field-field-event-conditions .even{
+  display: inline;
+}
+
+/* Awards */
+.view-user-awards .current {
+  display: inline;
+  color: red;
+}
+.view-user-awards .views-field-field-awardgiven-award-nid a {
+  display: inline;
+}

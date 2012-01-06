@@ -1,0 +1,34 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ */
+
+/**
+ * Implementation of hook_install().
+ */
+function rolereference_install() {
+  content_notify('install', 'rolereference');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function rolereference_uninstall() {
+  content_notify('uninstall', 'rolereference');
+}
+
+/**
+ * Implementation of hook_enable().
+ */
+function rolereference_enable() {
+  content_notify('enable', 'rolereference');
+}
+
+/**
+ * Implementation of hook_disable().
+ */
+function rolereference_disable() {
+  content_notify('disable', 'rolereference');
+}

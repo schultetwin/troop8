@@ -1,0 +1,11 @@
+; $Id: cookie_check.info,v 1.3 2009/01/21 17:37:07 nedjo Exp $
+name = Cookie check
+description = Checks for cookie support when users are attempting to log in and provides an error message.
+core = 6.x
+
+; Information added by drupal.org packaging script on 2009-01-21
+version = "6.x-1.0"
+core = "6.x"
+project = "cookie_check"
+datestamp = "1232565009"
+

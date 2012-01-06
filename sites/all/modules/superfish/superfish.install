@@ -1,0 +1,21 @@
+<?php
+// $Id: $
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function superfish_uninstall() {
+  // Delete variables
+  variable_del('superfish_number');
+  variable_del('superfish_animation');
+  variable_del('superfish_speed');
+  variable_del('superfish_easing');
+  variable_del('superfish_dropshadow');
+  variable_del('superfish_dropshadow');
+  variable_del('superfish_dropshadow');
+  variable_del('superfish_hoverintent');
+  variable_del('superfish_supersubs');
+  variable_del('superfish_bgiframe');
+}
+
+

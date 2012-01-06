@@ -1,0 +1,39 @@
+<?php
+// $Id: realname_userreference.install,v 1.1 2009/06/01 19:14:31 guix Exp $
+
+/**
+ * @file
+ * Implementation of hook_install().
+ */
+function realname_userreference_install() {
+  drupal_load('module', 'content');
+  content_notify('install', 'realname_userreference');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function realname_userreference_uninstall() {
+  drupal_load('module', 'content');
+  content_notify('uninstall', 'realname_userreference');
+}
+
+/**
+ * Implementation of hook_enable().
+ *
+ * Notify content module when this module is enabled.
+ */
+function realname_userreference_enable() {
+  drupal_load('module', 'content');
+  content_notify('enable', 'realname_userreference');
+}
+
+/**
+ * Implementation of hook_disable().
+ *
+ * Notify content module when this module is disabled.
+ */
+function realname_userreference_disable() {
+  drupal_load('module', 'content');
+  content_notify('disable', 'realname_userreference');
+}

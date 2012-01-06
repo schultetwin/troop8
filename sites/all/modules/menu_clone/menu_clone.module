@@ -1,0 +1,66 @@
+<?php
+// $Id: menu_clone.module,v 1.1 2009/05/08 23:03:06 garrettalbright Exp $
+
+function menu_clone_form_menu_edit_menu_alter(&$form, $form_state) {
+	if ($form['menu_name']['#type'] === 'textfield') {
+		// If we're editing a currently-existing menu instead of creating a new one,
+		// the '#type' will be 'value'.
+		// Load menus
+		$rez = db_query('SELECT menu_name, title FROM {menu_custom} ORDER BY title ASC');
+		$menus = array('<none>' => t('Do not clone a menu'));
+		while ($menu = db_fetch_array($rez)) {
+			$menus[$menu['menu_name']] = t('@title (@name)', array('@title' => $menu['title'], '@name' => $menu['menu_name']));
+		}
+		
+		$form['parent'] = array(
+			'#title' => t('Clone menu'),
+			'#description' => t('If a menu is chosen, the new menu will be populated with copies of the menu items in this menu.'),
+			'#type' => 'select',
+			'#options' => $menus,
+			'#weight' => -10,
+		);
+		
+		if (isset($form['#submit'])) {
+			$form['#submit'][] = 'menu_clone_clone';
+		}
+		else {
+			$form['#submit'] = array('menu_clone_clone');
+		}
+	}
+}
+
+function menu_clone_clone($form, &$form_state) {
+	if ($form_state['values']['parent'] !== '<none>') {
+		$rez = db_query('SELECT mlid FROM {menu_links} WHERE menu_name = "%s"', array($form_state['values']['parent']));
+		$menu = array();
+		$menu_name = 'menu-' . $form_state['values']['menu_name'];
+		while ($mlid = db_fetch_array($rez)) {
+			$mi = menu_link_load($mlid['mlid']);
+			$mi['depth'] = intval($mi['depth']);
+			if ($mi['depth'] === 1) {
+				// menu_name will be automatically reset for us at depths beyond 1
+				$mi['menu_name'] = 'menu-' . $form_state['values']['menu_name'];
+			}
+			$menu[] = $mi;
+		}
+		for ($depth = 1; $depth < 10; $depth++) {
+			$new_mlids = array();
+			$next_depth = $depth + 1;
+			foreach ($menu as &$mi) {
+				// Save the items at this depth
+				if ($mi['depth'] === $depth) {
+					$mi['old_mlid'] = $mi['mlid'];
+					$mi['menu_name'] = $menu_name;
+					unset($mi['mlid']);
+					menu_link_save($mi);
+					$new_mlids[$mi['old_mlid']] = $mi['mlid'];
+				}
+				elseif ($mi['depth'] === $next_depth) {
+					// Update plids on next level of items
+					$mi['plid'] = $new_mlids[$mi['plid']];
+				}
+			}
+		}
+		drupal_set_message(t('The new menu has been populated with menu items from the parent menu.')); 
+	}
+}

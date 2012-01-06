@@ -1,0 +1,5 @@
+name = "Troop Awards"
+description = "Special Customizations for Troop Awards"
+core = 6.x
+package = "Others"
+

@@ -1,0 +1,11 @@
+sites/*/settings*.php
+sites/*/files
+backup
+commons
+bdrupal
+mail
+devel
+cgi-bin
+css
+mail
+

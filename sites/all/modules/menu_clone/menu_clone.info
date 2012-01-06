@@ -1,0 +1,11 @@
+; $Id: menu_clone.info,v 1.1 2009/05/08 23:03:06 garrettalbright Exp $
+name = Menu clone
+description = Allows user to copy a menu and all of its items.
+core = 6.x
+
+; Information added by drupal.org packaging script on 2009-05-09
+version = "6.x-1.x-dev"
+core = "6.x"
+project = "menu_clone"
+datestamp = "1241828096"
+

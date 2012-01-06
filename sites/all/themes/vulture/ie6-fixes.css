@@ -1,0 +1,101 @@
+/**
+ * $Id: ie6-fixes.css, Vulture
+ */
+
+/****************************/
+/* IE6 FIXES                */
+/****************************/
+
+/* remove rounded bottom png for IE6 */
+
+/* set minimum height */
+
+/* prevent dropdown menus from disappearing behind header */
+
+body div#page,
+body div#header{
+	position:static;
+	z-index:1; /* this for z-index issues */
+}
+
+/* prevent dropdown menus from disappearing behind preface blocks */
+#secondary-menu,
+#preface,
+#sidebar-left,
+#main{
+  position: static;
+  z-index: 1;
+}
+
+#preface-wrapper div.block {
+  position: inherit;
+}
+
+#content-inner .teaser {
+  height: 1%;
+}
+
+body.layout-main-last #content-content,
+body.layout-main-last #content-header{
+	width: auto;
+	float: left;
+}
+
+body.layout-first-main-last #content-content{
+	width: 400px;
+	float: left;
+}
+
+/* adjust pager spacing */
+#main-wrapper .item-list ul.pager li {
+  margin: 0 2px;
+}
+
+#main-wrapper .item-list .pager a.active {
+  padding: 1px 0 2px 3px;
+}
+
+
+/* group the block-icon layout styles together */
+.block-blog .block-icon,
+.block-comment .block-icon,
+.block-forum .block-icon,
+.block-search .block-icon,
+.block-menu .block-icon,
+.comments-block-icon,
+.block-user .block-icon,
+#block-blog-0 .block-icon,
+#block-book-0 .block-icon,
+#block-menu-devel .block-icon,
+#block-user-0 .block-icon,
+#block-views-archive-block .block-icon,
+#block-views-comments_recent-block .block-icon {
+  top: -5px;
+}
+
+
+
+
+/**************************/
+/* ALPHA TRANSPARENCY FIX */
+/**************************/
+div.pngfix,
+h2.pngfix { 
+  behavior: url(/sites/all/themes/vulture/iepngfix.htc);   /* change path here and in iepngfix.htc to match theme location */ 
+} 
+
+
+/******************/
+/* HELPER CLASSES */
+/******************/
+
+/* add .clearfix class to clear floats after an element */
+
+.clearfix {                                       
+  display: block;
+  height: 1%;
+}
+
+
+
+

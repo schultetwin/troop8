@@ -1,0 +1,467 @@
+<?php
+// $Id: multiple_node_menu.module,v 1.4 2010/07/02 17:19:25 inclind Exp $
+
+/**
+ * Implementation of hook_menu()
+ */
+function multiple_node_menu_menu() {
+  $items = array();
+
+  $items['admin/settings/multiple_node_menu'] = array(
+    'title' => 'Multiple Node Menu',
+    'page callback' => '_multiple_node_menu_settings',
+    'access callback' => 'user_access',
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'includes/multiple_node_menu.admin.inc',
+  );
+
+  $items['multiple_node_menu/js/%'] = array(
+    'page callback' => 'multiple_node_menu_js',
+    'page arguments' => array(2),
+    'access arguments' => array('administer menu'),
+    'type ' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+
+/**
+ * menu callback for settings form.
+ */
+function _multiple_node_menu_settings() {
+  return drupal_get_form('_multiple_node_menu_settings_form');
+}
+
+
+function multiple_node_menu_js($delta = 0) {
+  $form = multiple_node_menu_ajax_form_handler($delta);
+
+  $multiple_menu_form = $form['menu']['multiple_node_menu']['menu_links'];
+  // Prevent duplicate wrappers.
+  unset($multiple_menu_form['#prefix'], $multiple_menu_form['#suffix']);
+
+  // render the form. status includes validation messages from the rest of the form
+  // $output = theme('status_messages') . drupal_render($multiple_menu_form);
+  $output = drupal_render($multiple_menu_form);
+
+  // make sure AHAH is attached
+  $javascript = drupal_add_js(NULL, NULL);
+  if (isset($javascript['setting'])) {
+    $output .= '<script type="text/javascript">';
+    $output .= 'jQuery.extend(Drupal.settings, '. drupal_to_js(call_user_func_array('array_merge_recursive', $javascript['setting'])) .');';
+    $output .= '</script>';
+  }
+
+  // final JSON rendering callback
+  drupal_json(array('status' => TRUE, 'data' => $output));
+}
+
+
+function multiple_node_menu_ajax_form_handler($delta = 0) {
+  include_once 'modules/node/node.pages.inc';
+
+  // get the form from the cache
+  $form_state = array('storage' => NULL, 'submitted' => FALSE);
+  $form_build_id = $_POST['form_build_id'];
+  $form = form_get_cache($form_build_id, $form_state);
+  $args = $form['#parameters'];
+
+  if (!is_array($args)) {
+    return;
+  }
+
+  $form_id = array_shift($args);
+
+  // process the form
+  $form_state['post'] = $form['#post'] = $_POST;
+  $form['#programmed'] = $form['#redirect'] = FALSE;
+
+  // Store which row, if any, is to be deleted
+  $form_state['remove_delta'] = $delta;
+
+  drupal_process_form($form_id, $form, $form_state);
+
+  // force form submission regardless of validation
+  if (form_get_errors()) {
+    form_execute_handlers('submit', $form, $form_state);
+  }
+
+  $form = drupal_rebuild_form($form_id, $form_state, $args, $form_build_id);
+
+  return $form;
+}
+
+
+/**
+ * Implementation of hook_nodeapi()
+ */
+function multiple_node_menu_nodeapi(&$node, $op, $arg1, $arg2) {
+  switch ($op) {
+    case 'insert':
+    case 'update':
+      if (!empty($node->menu_links)) {
+        _multiple_node_menu_submit($node);
+      }               
+      break; 
+  }
+}
+
+
+function _multiple_node_menu_submit($node) {
+  if (count($node->menu_links)) {
+    $node->menu = reset($node->menu_links);
+  }
+
+  $original_links = array();
+  $new_links = array();
+
+  $results = db_query("SELECT * FROM {menu_links} where router_path = 'node/%' AND link_path = 'node/%d' ORDER BY weight ASC", $node->nid);
+  while ($row = db_fetch_array($results)) {
+    $original_links[$row['mlid']] = $row;
+  }
+
+    $first_original_link = reset($original_links);
+    $first_new_link = reset($node->menu_links);
+
+  $reinsert = FALSE;
+
+  /*
+  Because of a sort order change, there is a new "first" menu item. 
+  Since Drupal considers the lowest mlid the most important, 
+  we basically have to delete all of our menu items and re-save them
+  */
+  if ($first_original_link['mlid'] != $first_new_link['link_mlid']) {
+    $reinsert = TRUE;
+  }
+
+  foreach ($node->menu_links AS $new_link) {
+    if (!(isset($new_link['link_mlid']) && is_numeric($new_link['link_mlid']) && $new_link['link_mlid'] > 0)) {
+      $new_link['link_mlid'] = 0;
+    }
+
+    list($menu_name, $plid) = explode(':', $new_link['link_parent']);
+
+    $item = array(
+      'link_title'  => $new_link['link_title'],
+      'menu_name'   => $menu_name,
+      'mlid'        => $new_link['link_mlid'],
+      'router_path' => 'node/%',
+      'plid'        => $plid,
+      'weight'      => $new_link['link_weight'],
+      'link_path'   => 'node/' . $node->nid,
+    );
+
+    if ($new_link['link_enable'] != 1) {
+      $item['hidden'] = 1;
+    }
+
+    if ($reinsert) {
+      if ($item['mlid'] > 0)
+    menu_link_delete($item['mlid']);
+
+      $item['mlid'] = 0;
+    }
+
+    menu_link_save($item);
+
+    if (!menu_link_save($item)) {
+      drupal_set_message(t('There was an error saving the menu link.'), 'error');
+    }
+
+    $new_links[$new_link['link_mlid']] = $new_link;
+  }
+  // Delete menu links that are in the database but not the form -- they've been deleted
+  foreach ($original_links AS $original_mlid => $original_link) {
+    if (!isset($new_links[$original_mlid]))
+    menu_link_delete($original_mlid);
+  }
+
+  // don't need this anymore because we don't really want the menu module to do anything else
+  unset($node->menu);
+}
+
+
+/**
+ * Implementation of hook_form_alter()
+ */
+function multiple_node_menu_form_alter(&$form, &$form_state, $form_id) {
+  if (isset($form['type']) && $form['type']['#value'] .'_node_form' == $form_id && isset($form['menu'])) {
+    $node = $form['#node'];
+    if (!$node)
+      return;
+
+    drupal_add_css( drupal_get_path('module', 'multiple_node_menu') . '/css/multiple_menu.css', 'module');
+
+    $form['menu']['link_title']['#prefix'] = '<div class="add-menu-link-wrapper" style="background-color: #EEE; padding: 10px; margin: 10px 0px;"><h3>Add a new menu link</h3>';
+    $form['menu']['hidden']['#attributes'] = array('style' => 'display: none');
+    $form['menu']['weight']['#type'] = 'hidden';
+
+    $form['#cache'] = TRUE;
+    $form['#submit'][] = 'multiple_node_menu_submit';
+
+    $form['menu']['multiple_node_menu'] = array(
+      '#weight' => 5,
+      '#tree' => FALSE,
+      '#prefix' => '<div class="clear-block" id="menu-multiple-wrapper">',
+      '#suffix' => '</div>',
+    );
+
+    $form['menu']['multiple_menu_add_more'] = array(
+      '#prefix' => '<div class="clear-block menu-add-more-container">',
+      '#suffix' => '</div></div>',
+      '#type' => 'submit',
+      '#value' => t('Add new menu link'),
+      '#weight' => 1,
+      '#submit' => array('multiple_node_menu_add_more_submit'),
+      '#ahah' => array(
+        'path' => 'multiple_node_menu/js/0',
+        'wrapper' => 'multiple-menu-items',
+        'method' => 'replace',
+        'effect' => 'fade',
+      ),
+    );
+
+    $form['menu']['multiple_node_menu']['menu_links'] = array(
+      '#prefix' => '<div id="multiple-menu-items"><h3>Current Menu Links</h3>',
+      '#suffix' => '</div>',
+      '#theme' => 'multiple_node_menu_table',
+    );
+
+    if (isset($form_state['post']['menu_links']) && count($form_state['post']['menu_links'])) {
+      $node->multiple_menu_links = $form_state['post']['menu_links'];
+    }
+
+    if (!$node->multiple_menu_links) {
+      $links = array();
+      $results = db_query("SELECT * FROM {menu_links} where router_path = 'node/%' AND link_path = 'node/%d' ORDER BY weight ASC", $node->nid);
+      $links = array();
+      while ($row = db_fetch_array($results)) {
+        $menu_link = array(
+          'link_title'   => $row['link_title'],
+          'link_weight'   => $row['weight'],
+          'link_parent'   => $row['menu_name'] . ':' . $row['plid'],
+          'link_mlid'   => $row['mlid'],
+          'link_enable'   => $row['hidden'] == 0 ? 1 : 0,
+        );
+        $links[] = $menu_link;
+      }
+      $node->multiple_menu_links = $links;
+    }
+    $link_count = count($node->multiple_menu_links);
+
+    // If a new track added, add to list and update the track count.
+    if (isset($form_state['new_link'])) {
+      $node->multiple_menu_links = array_merge($node->multiple_menu_links, array($form_state['new_link']));
+      $link_count++;
+    }
+
+    // If a track removed, remove from list and update the track count.
+    $remove_delta = -1;
+
+    if (!empty($form_state['remove_delta'])) {
+      $remove_delta = $form_state['remove_delta'] - 1;
+      unset($node->multiple_menu_links[$remove_delta]);
+      // Re-number the values.
+      $node->multiple_menu_links = array_values($node->multiple_menu_links);
+      $link_count--;
+    }
+
+    if ($link_count == 0) {
+      $form['menu']['multiple_node_menu']['menu_links']['no_links'] = array(
+        '#weight'   => 10,
+        '#value'   => 'This page is not currently in the menu.',
+      );
+    } else {
+      // Add the existing links to the form.
+      foreach ($node->multiple_menu_links as $delta=>$item) {
+        $form['menu']['multiple_node_menu']['menu_links'][$delta] = multiple_node_menu_item_form($delta, $item);
+      }
+    }
+  }
+}
+
+
+/**
+ * Implementation of hook_theme()
+ */
+function multiple_node_menu_theme() {
+  return array(
+    'multiple_node_menu_table' => array(
+      'arguments' => array('form')
+    )
+  );
+}
+
+
+function theme_multiple_node_menu_table($form) {
+  $headers = array(
+    t(''), // Spacer
+    t('Menu link title'),
+    t('Parent Item'),
+    t('Weight'),
+    t('Enable'),
+    t(''), // Delete
+  );
+
+  $rows = array(array());
+
+  foreach (element_children($form) as $key) {
+    // prevent printing field titles for every row
+    unset(
+      $form[$key]['link_title']['#title'],
+      $form[$key]['link_remove']['#title'],
+      $form[$key]['link_mlid']['#title'],
+      $form[$key]['link_enable']['#title'],
+      $form[$key]['link_parent']['#title'],
+      $form[$key]['link_weight']['#title']
+    );
+
+    // Build the table row.
+    $form[$key]['link_weight']['#attributes']['class'] = 'multiple-menu-weight';
+    $row = array(
+      'data' => array(
+        array('style' => 'width: 40px;'),
+        array('data' => drupal_render($form[$key]['link_title']), 'class' => 'link-title'),
+        array('data' => drupal_render($form[$key]['link_parent']), 'class' => 'link-parent'),
+        array('data' => drupal_render($form[$key]['link_weight']), 'class' => 'link-weight'),
+        array('data' => drupal_render($form[$key]['link_enable']), 'class' => 'link-enable'),
+        array('data' => drupal_render($form[$key]['link_remove']). drupal_render($form[$key]['link_mlid']) , 'class' => 'remove-menu-link'),
+      ), 'class' => 'draggable',
+    );
+    $rows[] = $row;
+  }
+
+  if (!$form['no_links'])
+    drupal_add_tabledrag('multiple-menu-table', 'order', 'sibling', 'multiple-menu-weight');
+
+  $output = theme('table', $headers, $rows, array('id' => 'multiple-menu-table'));
+  $output .= drupal_render($form);
+  return $output;
+}
+
+
+function multiple_node_menu_item_form($delta, $menu_item) {
+  $form = array(
+    '#tree' => TRUE,
+  );
+
+  // Menu link title.
+  $form['link_title'] = array(
+    '#type' => 'textfield',
+    '#value' => $menu_item['link_title'],
+    '#parents' => array('menu_links', $delta, 'link_title'),
+  );
+
+  $form['link_enable'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable'),
+    '#value' => $menu_item['link_enable'] == 0 ? 0 : 1,
+    '#parents' => array('menu_links', $delta, 'link_enable'),
+  );
+
+  $menus = array_intersect_key(menu_get_menus(), array_filter(variable_get('multiple_node_menu_menus', array_flip(array_keys(menu_get_menus())))));
+
+  // Generate a list of possible parents (not including this item or descendants).
+  if ($menu_item['mlid']) {
+    $options = menu_parent_options($menus, $menu_item);
+  } else {
+    $options = menu_parent_options($menus, array('mlid' => 0));
+  }
+
+  if (!empty($menu_item['link_parent'])) {
+    $default = $menu_item['link_parent'];
+  }
+
+  if (!(is_array($options) && array_key_exists($default, $options))) {
+    $default = 'primary-links:0';
+  }
+
+  $this_mlid = '';
+  if (isset($menu_item['link_mlid']) && is_numeric($menu_item['link_mlid']))
+    $this_mlid = $menu_item['link_mlid'];
+
+  $form['link_mlid'] = array(
+    '#type' => 'hidden',
+    '#value' => $this_mlid,
+    '#parents' => array('menu_links', $delta, 'link_mlid'),
+  );
+
+  $form['link_parent'] = array(
+    '#type' => 'select',
+    '#title' => t('Parent item'),
+    '#default_value' => $default,
+    '#options' => $options,
+    '#attributes' => array('class' => 'menu-title-select'),
+    '#parents' => array('menu_links', $delta, 'link_parent'),
+  );
+
+  // "weight" field. should be hidden if JS is enabled
+  $form['link_weight'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Weight'),
+    '#default_value' => $menu_item['link_weight'],
+    '#attributes' => array('class' => 'link-weight'),
+    '#parents' => array('menu_links', $delta, 'link_weight'),
+  );
+
+  // "remove" button
+  $form['link_remove'] = array(
+    '#type' => 'submit',
+    '#name' => 'link_remove_' . $delta,
+    '#value' => t('Delete'),
+    '#weight' => 1,
+    '#submit' => array('multiple_node_menu_remove_row_submit'),
+    '#parents' => array('menu_links', $delta, 'link_remove'),
+    '#ahah' => array(
+      'path' => 'multiple_node_menu/js/' . ($delta + 1),
+      'wrapper' => 'multiple-menu-items',
+      'method' => 'replace',
+      'effect' => 'fade',
+    ),
+  );
+
+  return $form;
+}
+
+
+/**
+ * Submit handler for 'Add menu link' button
+ */
+function multiple_node_menu_add_more_submit($form, &$form_state) {
+  if (!$form_state['post']['menu']['link_title'])
+    return;
+
+  $form_state['remove_delta'] = 0;
+
+  // Set the form to rebuild and run submit handlers.
+  node_form_submit_build_node($form, $form_state);
+
+  // Make the changes we want to the form state.
+  if ($form_state['values']['menu']['multiple_menu_add_more']) {
+    $new_link = array();
+    $new_link['link_title'] = $form_state['post']['menu']['link_title'];
+    list($menu_name, $plid) = explode(':', $form_state['post']['menu']['parent']);
+
+    $new_link['link_parent'] = $form_state['post']['menu']['parent'];
+    $new_link['link_enable'] = isset($form_state['post']['menu']['hidden']) ? 0 : 1;
+    $new_link['link_weight'] = $form_state['post']['menu']['weight'];
+    $form_state['new_link'] = $new_link;
+  }
+}
+
+
+function multiple_node_menu_submit($form, &$form_state) {
+  /*
+  For some reason form_state['values']['menu_links'] is stuck on the defaults here,
+  instead of the submitted values. Yet another needlessly complex Drupal voodoo process.
+  */
+  $form_state['values']['menu_links'] = $form['#post']['menu_links'];
+}
+
+
+function multiple_node_menu_remove_row_submit($form, &$form_state) {
+  // Set the form to rebuild and run submit handlers.
+  node_form_submit_build_node($form, $form_state);
+}

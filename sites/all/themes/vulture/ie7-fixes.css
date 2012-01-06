@@ -1,0 +1,85 @@
+/**
+ * $Id: ie7-fixes.css, Vulture
+ */
+
+/*************/
+/* IE7 FIXES */
+/*************/
+
+/* prevent dropdown menus from disappearing behind header */
+
+body div#page,
+body div#header{
+	position:static;
+	z-index:1; /* this for z-index issues */
+}
+
+/* prevent dropdown menus from disappearing behind preface blocks */
+#secondary-menu,
+#preface,
+#sidebar-left,
+#main{
+  position: static;
+  z-index: 1;
+}
+
+#preface-wrapper div.block {
+  position: inherit;
+}
+
+
+/* adjust pager spacing */
+#main-wrapper .item-list ul.pager li {
+  margin: 0 2px;
+}
+
+#main-wrapper .item-list .pager a.active {
+  padding: 1px 0 2px 3px;
+}
+
+
+
+/* limit legend width to text length */
+form fieldset legend {
+  display: inline-block !important;
+}
+
+
+.block {
+  position: relative;
+}
+
+/* prevent comment form background from disappearing */
+#comments .content {
+  zoom: 1;
+}
+
+/*--- USER BLOCK ---*/
+.block-user .block-icon {
+  left: -1px;
+  top: -14px;
+}
+
+/*--- SEARCH BLOCK ---*/
+.block-search .block-icon {
+  left: -2px;
+  top: -14px;
+}
+
+/*--- MENU BLOCK ---*/
+.block-menu .block-icon {
+  left: -1px;
+  top: -14px;
+}
+
+/*--- COMMENT BLOCK ---*/
+.block-comment .block-icon,
+.block-forum .block-icon {
+  left: -1px;
+  top: -14px;
+}
+
+.block-blog .block-icon {
+  left: -1px;
+  top: -14px;
+}

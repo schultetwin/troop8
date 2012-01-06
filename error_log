@@ -1,0 +1,283 @@
+[12-Mar-2009 20:48:07] PHP Fatal error:  Call to undefined function fckeditor_process_form() in /home/bobgeier/public_html/includes/form.inc on line 922
+[12-Mar-2009 22:22:49] PHP Fatal error:  Call to undefined function  _signup_load_scheduler_includes() in /home/bobgeier/public_html/sites/all/modules/signup-6.x-1.0-rc3/signup/signup.module on line 555
+[12-Mar-2009 22:23:01] PHP Fatal error:  Call to undefined function  _signup_load_scheduler_includes() in /home/bobgeier/public_html/sites/all/modules/signup-6.x-1.0-rc3/signup/signup.module on line 555
+[13-Mar-2009 12:11:02] PHP Fatal error:  Call to a member function get_handlers() on a non-object in /home/bobgeier/public_html/sites/all/modules/views/handlers/views_handler_field.inc on line 252
+[13-Mar-2009 16:23:46] PHP Fatal error:  Call to a member function get_handlers() on a non-object in /home/bobgeier/public_html/sites/all/modules/views/handlers/views_handler_field.inc on line 252
+[13-Mar-2009 16:33:19] PHP Fatal error:  Call to a member function get_handlers() on a non-object in /home/bobgeier/public_html/sites/all/modules/views/handlers/views_handler_field.inc on line 252
+[13-Mar-2009 16:34:08] PHP Fatal error:  Call to a member function get_handlers() on a non-object in /home/bobgeier/public_html/sites/all/modules/views/handlers/views_handler_field.inc on line 252
+[13-Mar-2009 17:36:34] PHP Fatal error:  Call to a member function get_handlers() on a non-object in /home/bobgeier/public_html/sites/all/modules/views/handlers/views_handler_field.inc on line 252
+[13-Mar-2009 20:08:27] PHP Fatal error:  Call to a member function get_handlers() on a non-object in /home/bobgeier/public_html/sites/all/modules/views/handlers/views_handler_field.inc on line 252
+[13-Mar-2009 20:10:13] PHP Fatal error:  Call to a member function get_handlers() on a non-object in /home/bobgeier/public_html/sites/all/modules/views/handlers/views_handler_field.inc on line 252
+[13-Mar-2009 20:15:12] PHP Fatal error:  Call to a member function get_handlers() on a non-object in /home/bobgeier/public_html/sites/all/modules/views/handlers/views_handler_field.inc on line 252
+[13-Mar-2009 20:16:39] PHP Fatal error:  Call to a member function get_handlers() on a non-object in /home/bobgeier/public_html/sites/all/modules/views/handlers/views_handler_field.inc on line 252
+[27-Apr-2009 08:20:40] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW, expecting ')' in /home/bobgeier/public_html/sites/all/themes/vulture-new/template.php on line 27
+[27-Apr-2009 08:21:06] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW, expecting ')' in /home/bobgeier/public_html/sites/all/themes/vulture-new/template.php on line 27
+[27-Apr-2009 08:21:19] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW, expecting ')' in /home/bobgeier/public_html/sites/all/themes/vulture-new/template.php on line 27
+[27-Apr-2009 08:22:08] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW, expecting ')' in /home/bobgeier/public_html/sites/all/themes/vulture-new/template.php on line 27
+[28-May-2009 22:21:20] PHP Parse error:  syntax error, unexpected T_STRING in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 6
+[29-May-2009 07:02:40] PHP Parse error:  syntax error, unexpected '<' in /home/bobgeier/public_html/index.php on line 40
+[02-Jun-2009 17:21:45] PHP Fatal error:  Call to undefined function  marinelli_width() in /home/bobgeier/public_html/sites/all/themes/vulture/page-node.tpl.php on line 96
+[02-Jun-2009 17:22:12] PHP Fatal error:  Call to undefined function  marinelli_width() in /home/bobgeier/public_html/sites/all/themes/vulture/page-node.tpl.php on line 96
+[02-Jun-2009 17:23:05] PHP Fatal error:  Call to undefined function  marinelli_width() in /home/bobgeier/public_html/sites/all/themes/vulture/page-node.tpl.php on line 96
+[02-Jun-2009 17:29:56] PHP Fatal error:  Call to undefined function  marinelli_width() in /home/bobgeier/public_html/sites/all/themes/vulture/page-node.tpl.php on line 96
+[02-Jun-2009 17:33:43] PHP Fatal error:  Call to undefined function  marinelli_width() in /home/bobgeier/public_html/sites/all/themes/vulture/page-node.tpl.php on line 96
+[02-Jun-2009 17:33:55] PHP Fatal error:  Call to undefined function  marinelli_width() in /home/bobgeier/public_html/sites/all/themes/vulture/page-node.tpl.php on line 96
+[02-Jun-2009 18:01:11] PHP Fatal error:  Call to undefined function  marinelli_width() in /home/bobgeier/public_html/sites/all/themes/vulture/page-node.tpl.php on line 96
+[02-Jun-2009 20:47:42] PHP Fatal error:  Call to undefined function base_url() in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 4
+[02-Jun-2009 20:48:08] PHP Fatal error:  Call to undefined function base_url() in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 4
+[02-Jun-2009 20:48:22] PHP Fatal error:  Call to undefined function base_url() in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 4
+[02-Jun-2009 21:55:06] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 3
+[02-Jun-2009 21:58:33] PHP Parse error:  syntax error, unexpected T_STRING in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 6
+[02-Jun-2009 21:59:22] PHP Parse error:  syntax error, unexpected '/' in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 11
+[02-Jun-2009 21:59:49] PHP Parse error:  syntax error, unexpected '/' in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 11
+[02-Jun-2009 22:00:22] PHP Parse error:  syntax error, unexpected '/' in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 11
+[02-Jun-2009 22:11:25] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 3
+[03-Jun-2009 01:15:43] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/devel/sites/default/files/events/thumb_st_patricks_day_graphics_07_event.gif&#039;, &#039;http://troop8.org/bdrupal/&#039;, &#039;166.90.246.59&#039;, 1244006143) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[03-Jun-2009 01:15:43] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/devel/sites/default/files/events/thumb_Boston%20City%20Flow.jpg.thumb.jpg&#039;, &#039;http://troop8.org/bdrupal/&#039;, &#039;166.90.246.59&#039;, 1244006143) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[05-Jun-2009 00:25:14] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/devel/sites/default/files/events/thumb_Boston%20City%20Flow.jpg.thumb.jpg&#039;, &#039;http://troop8.org/bdrupal/&#039;, &#039;166.90.246.59&#039;, 1244175914) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[05-Jun-2009 00:25:14] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/devel/sites/default/files/events/thumb_st_patricks_day_graphics_07_event.gif&#039;, &#039;http://troop8.org/bdrupal/&#039;, &#039;166.90.246.59&#039;, 1244175914) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[09-Jun-2009 17:33:12] PHP Parse error:  syntax error, unexpected ')' in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 2
+[09-Jun-2009 17:33:26] PHP Parse error:  syntax error, unexpected ')' in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 2
+[09-Jun-2009 17:35:00] PHP Parse error:  syntax error, unexpected ')' in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 2
+[11-Jun-2009 23:09:19] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[11-Jun-2009 23:09:26] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[14-Jun-2009 13:02:00] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/&#039;, &#039;http://www.google.com/search?q=troop+8+&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:en-US:official&amp;client=firefox-a&#039;, &#039;71.180.191.141&#039;, 1244998920) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[17-Jun-2009 22:57:47] PHP Fatal error:  views_db_object::get_item() [<a href='views-db-object.get-item'>views-db-object.get-item</a>]: The script tried to execute a method or access a property of an incomplete object. Please ensure that the class definition &quot;views_plugin_display_default&quot; of the object you are trying to operate on was loaded _before_ unserialize() gets called or provide a __autoload() function to load the class definition  in /home/bobgeier/public_html/sites/all/modules/views/includes/view.inc on line 1837
+[18-Jun-2009 23:44:52] PHP Parse error:  syntax error, unexpected T_IF in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 3
+[18-Jun-2009 23:51:21] PHP Parse error:  syntax error, unexpected '!', expecting '(' in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 35
+[18-Jun-2009 23:52:12] PHP Parse error:  syntax error, unexpected '!', expecting '(' in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 35
+[18-Jun-2009 23:57:12] PHP Parse error:  syntax error, unexpected T_RETURN in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 39
+[19-Jun-2009 00:17:20] PHP Parse error:  syntax error, unexpected $end in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 9
+[19-Jun-2009 00:17:33] PHP Parse error:  syntax error, unexpected $end in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 9
+[19-Jun-2009 00:17:44] PHP Parse error:  syntax error, unexpected $end in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 9
+[19-Jun-2009 00:19:09] PHP Parse error:  syntax error, unexpected $end in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 9
+[19-Jun-2009 00:19:20] PHP Parse error:  syntax error, unexpected $end in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 9
+[19-Jun-2009 00:22:18] PHP Parse error:  syntax error, unexpected $end in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 9
+[19-Jun-2009 00:22:28] PHP Parse error:  syntax error, unexpected $end in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 9
+[19-Jun-2009 00:22:49] PHP Parse error:  syntax error, unexpected $end in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 9
+[19-Jun-2009 00:23:06] PHP Parse error:  syntax error, unexpected $end in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 9
+[19-Jun-2009 00:23:12] PHP Parse error:  syntax error, unexpected $end in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 9
+[19-Jun-2009 00:23:46] PHP Parse error:  syntax error, unexpected $end in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 9
+[19-Jun-2009 00:23:50] PHP Parse error:  syntax error, unexpected $end in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 9
+[19-Jun-2009 00:26:33] PHP Parse error:  syntax error, unexpected $end in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 9
+[19-Jun-2009 00:37:02] PHP Parse error:  syntax error, unexpected T_RETURN in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 39
+[04-Jul-2009 19:39:21] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/calendar/ical/2009-06&#039;, &#039;&#039;, &#039;166.205.4.39&#039;, 1246750761) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[04-Jul-2009 20:39:55] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/calendar/ical/2009-06&#039;, &#039;&#039;, &#039;166.205.5.165&#039;, 1246754395) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[11-Jul-2009 20:04:41] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[11-Jul-2009 20:04:41] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[11-Jul-2009 20:04:41] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[11-Jul-2009 20:04:51] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[11-Jul-2009 20:05:03] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[11-Jul-2009 20:05:09] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[11-Jul-2009 20:05:15] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[11-Jul-2009 20:05:27] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[11-Jul-2009 20:05:32] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[11-Jul-2009 20:05:37] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[11-Jul-2009 20:05:43] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[11-Jul-2009 20:05:48] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[24-Jul-2009 07:03:56] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/calendar/ical/2009-06&#039;, &#039;&#039;, &#039;166.205.7.41&#039;, 1248433436) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[03-Aug-2009 01:40:13] PHP Warning:  MySQL server has gone away
+query: SELECT name, filename, throttle FROM system WHERE type = &#039;module&#039; AND status = 1 AND bootstrap = 1 ORDER BY weight ASC, filename ASC in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[19-Aug-2009 22:09:24] PHP Warning:   in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[19-Aug-2009 22:09:24] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/bobgeier/public_html/includes/database.mysql.inc:128) in /home/bobgeier/public_html/includes/bootstrap.inc on line 630
+[19-Aug-2009 22:09:24] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/bobgeier/public_html/includes/database.mysql.inc:128) in /home/bobgeier/public_html/includes/bootstrap.inc on line 631
+[19-Aug-2009 22:09:24] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/bobgeier/public_html/includes/database.mysql.inc:128) in /home/bobgeier/public_html/includes/bootstrap.inc on line 632
+[19-Aug-2009 22:09:24] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/bobgeier/public_html/includes/database.mysql.inc:128) in /home/bobgeier/public_html/includes/bootstrap.inc on line 633
+[19-Aug-2009 22:09:24] PHP Warning:   in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[20-Aug-2009 12:40:26] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/info/scouting-program-takes-life-again-iraq&#039;, &#039;http://images.google.com/imgres?imgurl=http://troop8.org/sites/default/files/photos/general/phoca_thumb_l_20081201-p6-4.jpg&amp;imgrefurl=http://troop8.org/info/scouting-program-takes-life-again-iraq&amp;usg=__WrMGN4ypUIyLuRgeI10GujFa2nA=&amp;h=400&amp;w=597&amp;sz=51&amp;hl=en&amp;start=62&amp;um=1&amp;tbnid=TV61hk1CsZ8FBM:&amp;tbnh=90&amp;tbnw=135&amp;prev=/images%3Fq%3Diraq%2Bcamp%2Bvictory%26ndsp%3D20%26hl%3Den%26safe%3Dactive%26rls%3Dcom.microsof in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[27-Aug-2009 23:13:27] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/calendar/ical/2009-06&#039;, &#039;&#039;, &#039;24.11.83.119&#039;, 1251429207) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[30-Aug-2009 23:25:19] PHP Fatal error:  Cannot redeclare filefield_token_list() (previously declared in /home/bobgeier/public_html/sites/all/modules/filefield/filefield.token.inc:14) in /home/bobgeier/public_html/sites/all/modules/filefield/filefield_token/filefield_token.module on line 20
+[30-Aug-2009 23:25:53] PHP Fatal error:  Cannot redeclare filefield_token_list() (previously declared in /home/bobgeier/public_html/sites/all/modules/filefield/filefield_token/filefield_token.module:7) in /home/bobgeier/public_html/sites/all/modules/filefield/filefield.token.inc on line 29
+[30-Aug-2009 23:26:19] PHP Fatal error:  Cannot redeclare filefield_token_list() (previously declared in /home/bobgeier/public_html/sites/all/modules/filefield/filefield_token/filefield_token.module:7) in /home/bobgeier/public_html/sites/all/modules/filefield/filefield.token.inc on line 29
+[30-Aug-2009 23:26:21] PHP Fatal error:  Cannot redeclare filefield_token_list() (previously declared in /home/bobgeier/public_html/sites/all/modules/filefield/filefield_token/filefield_token.module:7) in /home/bobgeier/public_html/sites/all/modules/filefield/filefield.token.inc on line 29
+[30-Aug-2009 23:27:37] PHP Fatal error:  Cannot redeclare filefield_token_list() (previously declared in /home/bobgeier/public_html/sites/all/modules/filefield/filefield_token/filefield_token.module:7) in /home/bobgeier/public_html/sites/all/modules/filefield/filefield.token.inc on line 29
+[02-Sep-2009 12:02:22] PHP Fatal error:  Call to undefined function webform_menu_load() in /home/bobgeier/public_html/includes/menu.inc on line 410
+[02-Sep-2009 12:02:49] PHP Fatal error:  Call to undefined function webform_menu_load() in /home/bobgeier/public_html/includes/menu.inc on line 410
+[02-Sep-2009 12:03:17] PHP Fatal error:  Call to undefined function webform_menu_load() in /home/bobgeier/public_html/includes/menu.inc on line 410
+[02-Sep-2009 18:37:03] PHP Parse error:  syntax error, unexpected T_RETURN in /home/bobgeier/public_html/includes/common.inc(1645) : eval()'d code on line 39
+[02-Sep-2009 18:49:31] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/calendar/ical/2009-06&#039;, &#039;&#039;, &#039;24.11.83.119&#039;, 1251931771) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[09-Sep-2009 16:37:51] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required './sites/all/modules/calendar/theme/theme.inc' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/bobgeier/public_html/sites/all/modules/calendar/calendar.module on line 38
+[09-Sep-2009 16:37:54] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required './sites/all/modules/calendar/theme/theme.inc' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/bobgeier/public_html/sites/all/modules/calendar/calendar.module on line 38
+[09-Sep-2009 16:37:59] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required './sites/all/modules/calendar/theme/theme.inc' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/bobgeier/public_html/sites/all/modules/calendar/calendar.module on line 38
+[09-Sep-2009 16:38:01] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required './sites/all/modules/calendar/theme/theme.inc' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/bobgeier/public_html/sites/all/modules/calendar/calendar.module on line 38
+[12-Sep-2009 22:32:53] PHP Warning:  MySQL server has gone away
+query: SELECT name, filename, throttle FROM system WHERE type = &#039;module&#039; AND status = 1 AND bootstrap = 1 ORDER BY weight ASC, filename ASC in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[15-Sep-2009 23:16:34] PHP Fatal error:  Out of memory (allocated 36438016) (tried to allocate 83 bytes) in /home/bobgeier/public_html/includes/cache.inc on line 33
+[21-Sep-2009 14:58:16] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/content/page/what-kids-are-good-fit-troop-8&#039;, &#039;&#039;, &#039;212.138.47.15&#039;, 1253559496) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[21-Sep-2009 14:58:34] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/content/page/volunteer-information&#039;, &#039;&#039;, &#039;212.138.47.13&#039;, 1253559514) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[21-Sep-2009 22:14:01] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/user/7/guestbook/&#039;, &#039;http://www.troop8.org/user/7/guestbook/&#039;, &#039;162.84.94.250&#039;, 1253585641) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[21-Sep-2009 22:16:25] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/user/7/guestbook/&#039;, &#039;http://www.troop8.org/user/7/guestbook/&#039;, &#039;162.84.94.250&#039;, 1253585785) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[22-Sep-2009 00:54:30] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/user/7/guestbook/&#039;, &#039;http://www.troop8.org/user/7/guestbook/&#039;, &#039;162.84.94.250&#039;, 1253595270) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[22-Sep-2009 08:04:09] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/user/7/guestbook/&#039;, &#039;http://www.troop8.org/user/7/guestbook/&#039;, &#039;162.84.94.250&#039;, 1253621049) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[28-Sep-2009 00:50:01] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/user/61/guestbook&#039;, &#039;http://troop8.org/user/61/guestbook&#039;, &#039;64.191.14.213&#039;, 1254113401) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[28-Sep-2009 01:28:53] PHP Warning:  MySQL server has gone away
+query: SELECT name, filename, throttle FROM system WHERE type = &#039;module&#039; AND status = 1 AND bootstrap = 1 ORDER BY weight ASC, filename ASC in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[07-Oct-2009 09:31:44] PHP Warning:  MySQL server has gone away
+query: SELECT name, filename, throttle FROM system WHERE type = &#039;module&#039; AND status = 1 AND bootstrap = 1 ORDER BY weight ASC, filename ASC in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[09-Oct-2009 23:25:35] PHP Warning:  MySQL server has gone away
+query: SELECT name, filename, throttle FROM system WHERE type = &#039;module&#039; AND status = 1 AND bootstrap = 1 ORDER BY weight ASC, filename ASC in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[19-Oct-2009 23:59:18] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[19-Oct-2009 23:59:25] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[19-Oct-2009 23:59:30] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[05-Nov-2009 06:49:35] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/user/25/guestbook/&#039;, &#039;http://troop8.org/user/25/guestbook/&#039;, &#039;216.224.124.124&#039;, 1257421775) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[01-Dec-2009 00:00:37] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[04-Dec-2009 17:58:43] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/patrol/patrol-a&#039;, &#039;http://www.troop8.org/&#039;, &#039;68.40.49.122&#039;, 1259967523) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[04-Dec-2009 18:08:24] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/user/20/guestbook&#039;, &#039;http://troop8.org/user/20/guestbook&#039;, &#039;95.215.0.39&#039;, 1259968104) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[04-Dec-2009 18:08:24] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/user/20/guestbook&#039;, &#039;http://troop8.org/user/20/guestbook&#039;, &#039;95.215.0.39&#039;, 1259968104) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[23-Dec-2009 22:00:06] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/content/page/parent-information&#039;, &#039;http://troop8.org/content/page/troop-8-news&#039;, &#039;68.40.123.189&#039;, 1261623606) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[30-Dec-2009 14:24:08] PHP Warning:   in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[30-Dec-2009 14:24:14] PHP Warning:   in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[15-Jan-2010 16:06:27] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[19-Jan-2010 21:41:24] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/user/82/guestbook&#039;, &#039;&#039;, &#039;213.108.202.210&#039;, 1263955284) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[15-Feb-2010 16:53:55] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:54:28] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:54:31] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:54:34] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:54:36] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:54:38] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:54:39] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:54:40] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:54:41] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:54:47] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:54:53] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:55:06] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:55:09] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:55:10] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[15-Feb-2010 16:55:54] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[22-Feb-2010 12:24:03] PHP Warning:  MySQL server has gone away
+query: SELECT name, filename, throttle FROM system WHERE type = &#039;module&#039; AND status = 1 AND bootstrap = 1 ORDER BY weight ASC, filename ASC in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[22-Feb-2010 12:24:03] PHP Warning:  MySQL server has gone away
+query: SELECT name, filename, throttle FROM system WHERE type = &#039;module&#039; AND status = 1 AND bootstrap = 1 ORDER BY weight ASC, filename ASC in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[22-Feb-2010 12:24:26] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/content/page/troop-8-news&#039;, &#039;&#039;, &#039;65.215.68.222&#039;, 1266859466) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[22-Feb-2010 12:24:27] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/content/page/parent-information&#039;, &#039;&#039;, &#039;65.215.68.222&#039;, 1266859467) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[22-Feb-2010 12:24:27] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/info/methods-scouting&#039;, &#039;&#039;, &#039;65.215.68.222&#039;, 1266859467) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[22-Feb-2010 13:09:34] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/content/page/troop-8-overview&#039;, &#039;&#039;, &#039;65.215.68.222&#039;, 1266862174) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[02-Mar-2010 17:03:28] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[02-Mar-2010 17:03:52] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[02-Mar-2010 17:04:54] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[02-Mar-2010 17:06:42] PHP Fatal error:  Call to undefined function  node_get_types() in /home/bobgeier/public_html/sites/all/themes/vulture/template.php on line 17
+[02-Mar-2010 17:15:13] PHP Warning:  MySQL server has gone away
+query: INSERT INTO watchdog
+    (uid, type, message, variables, severity, link, location, referer, hostname, timestamp)
+    VALUES
+    (0, &#039;php&#039;, &#039;%message in %file on line %line.&#039;, &#039;a:4:{s:6:\&quot;%error\&quot;;s:12:\&quot;user warning\&quot;;s:8:\&quot;%message\&quot;;s:0:\&quot;\&quot;;s:5:\&quot;%file\&quot;;s:45:\&quot;/home/bobgeier/public_html/includes/cache.inc\&quot;;s:5:\&quot;%line\&quot;;i:109;}&#039;, 3, &#039;&#039;, &#039;http://troop8.org/content/event/406&#039;, &#039;&#039;, &#039;67.195.115.108&#039;, 1267568113) in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[04-Mar-2010 13:09:51] PHP Warning:  MySQL server has gone away
+query: SELECT name, filename, throttle FROM system WHERE type = &#039;module&#039; AND status = 1 AND bootstrap = 1 ORDER BY weight ASC, filename ASC in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[10-Mar-2010 01:44:56] PHP Warning:  MySQL server has gone away
+query: SELECT name, filename, throttle FROM system WHERE type = &#039;module&#039; AND status = 1 AND bootstrap = 1 ORDER BY weight ASC, filename ASC in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[10-Mar-2010 10:52:16] PHP Warning:  MySQL server has gone away
+query: SELECT name, filename, throttle FROM system WHERE type = &#039;module&#039; AND status = 1 AND bootstrap = 1 ORDER BY weight ASC, filename ASC in /home/bobgeier/public_html/includes/database.mysql.inc on line 128
+[11-Mar-2010 23:41:10] PHP Warning:  MySQL server has gone away
+query: SELECT name, filename, throttle FROM system WHERE type = &#039;module&#039; AND status = 1 AND bootstrap = 1 ORDER BY weight ASC, filename ASC in /home/bobgeier/public_html/includes/database.mysql.inc on line 128

@@ -1,0 +1,30 @@
+<?php
+// $Id: cookie_check.module,v 1.6 2009/01/21 17:28:16 nedjo Exp $
+
+/**
+ * @file
+ * Provides an error message on user login if cookies are not supported.
+ *
+ * Based on patch from chx and others in http://drupal.org/node/2946.
+ */
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function cookie_check_form_alter(&$form, $form_state, $form_id) {
+  if (in_array($form_id, array('user_login', 'user_login_block'))) {
+    $form['#validate'][] = 'cookie_check_validate';
+  }
+}
+
+/**
+ * Validate callback for user login form submission.
+ *
+ * If the cookie set previously is not present, redirect.
+ */
+function cookie_check_validate($form, &$form_state) {
+  if (!$_COOKIE) {
+    $domain = ini_get('session.cookie_domain') ? ini_get('session.cookie_domain') : $_SERVER['HTTP_HOST'];
+    form_set_error('', t('It seems your browser does not accept cookies. To log into this site, you need to accept cookies from the domain @domain.', array('@domain' => $domain)));
+  }
+}

@@ -1,0 +1,12 @@
+; $Id: rolereference.info,v 1.1.4.2 2009/01/08 22:14:08 cyu Exp $
+name = Role Reference
+description = Defines a field type for referencing roles.
+package = CCK
+core = 6.x
+dependencies[] = content
+; Information added by drupal.org packaging script on 2010-03-30
+version = "6.x-1.2"
+core = "6.x"
+project = "rolereference"
+datestamp = "1269911427"
+

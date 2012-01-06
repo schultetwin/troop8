@@ -1,0 +1,3 @@
+<?php
+
+include_once('troop_award_feature.features.inc');

@@ -1,0 +1,101 @@
+Index: date/theme/theme.inc
+===================================================================
+--- date/theme/theme.inc	(revision 114)
++++ date/theme/theme.inc	(revision 120)
+@@ -168,6 +168,7 @@
+ function template_preprocess_date_vcalendar(&$vars) {
+     
+   $vars['current_date'] = date_format(date_now(), DATE_FORMAT_ICAL);
++  $vars['current_date_utc'] = date_format(date_now('UTC'), DATE_FORMAT_ICAL);
+   $vars['site_timezone'] = date_default_timezone_name();
+   $vars['calname'] = date_ical_escape_text(!empty($vars['calname']) ? $vars['calname'] : variable_get('site_name', ''));
+   
+@@ -211,7 +212,7 @@
+           }
+         }
+         elseif (in_array($key, array('summary', 'description', 'location'))) {
+-          $events[$uid][$key] = date_ical_escape_text($value);
++          $events[$uid][$key] = date_ical_escape_text(html_entity_decode($value, ENT_QUOTES, 'UTF-8'));
+         }
+       }
+     }
+@@ -396,4 +397,4 @@
+   else {
+     return date_format_interval($start_date, $interval);
+   }
+-}
+\ No newline at end of file
++}
+Index: calendar/calendar_ical/calendar-view-ical.tpl.php
+===================================================================
+--- calendar/calendar_ical/calendar-view-ical.tpl.php	(revision 114)
++++ calendar/calendar_ical/calendar-view-ical.tpl.php	(revision 120)
+@@ -31,25 +31,25 @@
+ PRODID:-//Drupal iCal API//EN
+ <?php foreach($events as $event): ?>
+ BEGIN:VEVENT
+-UID:<?php print($event['uid'] . "\n") ?>
+-SUMMARY:<?php print($event['summary'] . "\n") ?>
+-DTSTAMP;TZID=<?php print $site_timezone ?>;VALUE=DATE-TIME:<?php print($current_date . "\n") ?>
+-DTSTART;<?php print $event['timezone'] ?>VALUE=DATE-TIME:<?php print($event['start'] . "\n") ?>
++UID:<?php print($event['uid'] . "\r\n") ?>
++SUMMARY:<?php print($event['summary'] . "\r\n") ?>
++DTSTAMP:<?php print($current_date_utc . "Z\r\n") ?>
++DTSTART;<?php print $event['timezone'] ?>VALUE=DATE-TIME:<?php print($event['start'] . "\r\n") ?>
+ <?php if (!empty($event['end'])): ?>
+-DTEND;<?php print $event['timezone'] ?>VALUE=DATE-TIME:<?php print($event['end'] . "\n") ?>
++DTEND;<?php print $event['timezone'] ?>VALUE=DATE-TIME:<?php print($event['end'] . "\r\n") ?>
+ <?php endif; ?>
+ <?php if (!empty($event['rrule'])) : ?>
+-RRULE;<?php print($event['rrule'] . "\n") ?>
++RRULE;<?php print($event['rrule'] . "\r\n") ?>
+ <?php endif; ?>
+ <?php if (!empty($event['url'])): ?>
+-URL;VALUE=URI:<?php print($event['url'] . "\n") ?>
++URL;VALUE=URI:<?php print($event['url'] . "\r\n") ?>
+ <?php endif; ?>
+ <?php if (!empty($event['location'])): ?>
+-LOCATION:<?php print($event['location'] . "\n") ?>
++LOCATION:<?php print($event['location'] . "\r\n") ?>
+ <?php endif; ?>
+ <?php if (!empty($event['description'])) : ?>
+-DESCRIPTION:<?php print($event['description'] . "\n") ?>
++DESCRIPTION:<?php print($event['description'] . "\r\n") ?>
+ <?php endif; ?>
+ END:VEVENT
+ <?php endforeach; ?>
+-END:VCALENDAR
+\ No newline at end of file
++END:VCALENDAR
+Index: calendar/includes/calendar.inc
+===================================================================
+--- calendar/includes/calendar.inc	(revision 114)
++++ calendar/includes/calendar.inc	(revision 120)
+@@ -349,6 +349,9 @@
+         }
+       }
+     }
++
++    // set the domain part of the id
++    $domain = check_plain($_SERVER['SERVER_NAME']);
+      
+     // If there are multiple date fields in this calendar we may get
+     // duplicate items from the other date fields, so add a way to
+@@ -363,7 +366,7 @@
+         $real_field = str_replace(array('_value2', '_value'), '', $field_name);
+       }
+       
+-      $id = 'calendar:'. $item->{$view->base_field} .':'. $real_field .':'. $delta;
++      $id = 'calendar.'. $item->{$view->base_field} .'.'. $real_field .'.'. $delta . '@' . $domain;
+       
+       // When creating iCal feeds for repeating dates we don't want all
+       // the multiple values, send only the first value.
+@@ -546,7 +549,7 @@
+           else {
+             calendar_node_stripe($view, $node, $alias, $alias);
+             calendar_node_taxonomy_stripe($view, $node, $alias, $alias);
+-            $node->date_id = $id .':'. $pos;
++            $node->date_id = $id;
+ 
+             $nodes[] = $node;
+             unset($node);

@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * Implementation of hook_block().
+ */
+function troop_awards_block($op = 'list', $delta = 0, $edit = array()) {
+  switch ($op) {
+    case 'list':
+      $blocks['user_add_award'] = array(
+        'info' => t('Add User Award'),
+        'cache' => BLOCK_NO_CACHE,
+        'visibility' => 1,
+        'pages' => array(
+          'user/*',
+        ),
+      );
+      return $blocks;
+    case 'view':
+      switch ($delta) {
+        case 'user_add_award':
+          if (arg(0) == 'user' && is_numeric(arg(1)) && !arg(2)) {
+            $account = user_load(arg(1));
+          }
+          $block['subject'] = t('Add Award/Position');
+          $block['content'][] = l(t('Add Award'), 'node/add/award-given/' . $account->uid);
+	  $block['content'][] = l(t('Add Position'), 'node/add/position-given/' . $account->uid);
+	  $block['content'] = theme('item_list', $block['content']);
+          break;
+      }
+      return $block;
+      break;
+  }
+}
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function troop_awards_form_alter(&$form, &$from_state, $form_id) {
+  switch ($form_id) {
+    case 'award_given_node_form':
+      if ($form['field_awardgiven_user']['#default_value']['0']['uid'] == '' && is_numeric(arg(3))) {
+        $form['field_awardgiven_user']['#default_value']['0']['uid'] = arg(3);
+      }	
+      break;
+    case 'position_given_node_form':
+      if ($form['field_positiongiven_user']['#default_value']['0']['uid'] == '' && is_numeric(arg(3))) {
+        $form['field_positiongiven_user']['#default_value']['0']['uid'] = arg(3);
+      }	
+      break;
+  }
+}
+
